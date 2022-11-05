@@ -8,14 +8,17 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
     <link rel="stylesheet" href="index.css" ></link>
+    <script type="text/javascript" src="stf.js" ></script>
     <!-- <link rel="stylesheet" href="navbar.css" ></link> -->
     <style>
       .float_nav {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        z-index: 999;
         position: fixed;
         right: 4vw;
         height: 100vh;
@@ -35,8 +38,12 @@
         height: 50px;
         width: 50px;
         text-align: center;
-        box-shadow: 4px 7px 7px 4px #000;
+        box-shadow: 4px 6px 6px 4px black;
         /* transition: transform 0.3s cubic-bezier(0.925, 0.150, 0.505, 1.030); */
+      }
+
+      .float_nav > nav > a > .material-icons {
+        color: #093336;
       }
 
       .float_nav > nav {
@@ -53,42 +60,15 @@
     </style>
 
 </head>
+<div id="bottom_line"></div>
 <body>
-
-  <!-- </div class="float_nav">
-    <nav class="nav vertical">
-        <ul>
-          <li>
-            <a href="#">
-              <i class="material-icons">home</i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-               <i class="material-icons">person</i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-               <i class="material-icons">search</i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-               <i class="material-icons">face</i>
-            </a>
-          </li>
-        </ul>
-    </nav>
-  </div> -->
-
   <div class="float_nav">
     <nav>
-          <a href="#" class="rounded-circle">
+          <a href="#front_image" class="rounded-circle">
             <i class="material-icons">home</i>
           </a>
-          <a href="#" class="rounded-circle">
-             <i class="material-icons">person</i>
+          <a href="#about_me" class="rounded-circle">
+             <i class="material-icons">face</i>
           </a>
           <a href="#" class="rounded-circle">
              <i class="material-icons">search</i>
@@ -98,10 +78,13 @@
           </a>
     </nav>
   </div>
-
-    <div class="front_image">
+  
+    <div id="front_image" class="my_container front_image">
+        <div class="filler"></div>
         <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" style="width: 150px;" alt="Avatar" />
-        <h1 class="name vibrant_blue img-fluid">Sudharsan</h1>
+        <div id="name">
+          <h1 id="actual_name" class="vibrant_blue">Sudharsan</h1>
+        </div>
         <hr>
         <h2 class="gray">student</h2> 
         <p class="gray">
@@ -111,7 +94,13 @@
         
     </div>
 
-    <div class="career_obj my_container">
+    <div id="about_me" class="career_obj my_container">
+      <h1 class="title vibrant_blue">About me</h1>
+      <p class="gray">Seeking the position of a full stack developer for further enhancement of knowledge and to work in game-changing projects.</p>      
+      <!-- <img src="pen.png" /> -->
+    </div>
+
+    <div id="#career_obj" class="career_obj my_container">
         <h1 class="title vibrant_blue">Career objective</h1>
         <p class="gray">Seeking the position of a full stack developer for further enhancement of knowledge and to work in game-changing projects.</p>      
         <!-- <img src="pen.png" /> -->
@@ -127,4 +116,5 @@
 
 </body>
 </html>
-    <!-- seeking the position of a full stack developer for further enhancement of knowledge and to work in game-changing projects. -->
+<!-- seeking the position of a full stack developer for further enhancement of knowledge and to work in game-changing projects. -->
+<script type="text/javascript" src="stf.js" ></script>
